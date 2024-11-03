@@ -11,7 +11,7 @@ const getPosts = async () => {
 }
 
 // helper function to save JSON file
-const savePosts = async () => {
+const savePosts = async (posts) => {
     await fs.writeFile(dataPath, JSON.stringify(posts,null,2))
 }
 
@@ -38,4 +38,4 @@ router.delete('/:id', async (req, res) => {
     res.status(204).end()
 })
 
-nodule.exports = router
+module.exports = router
