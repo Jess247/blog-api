@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import deletePng from "../imgs/delete.png"
+import { Link } from "react-router-dom"
 
 function PostList({refresh}) {
 
@@ -42,8 +43,7 @@ function PostList({refresh}) {
                         onClick={() => deletePost(post.id)}
                         />
                     </div>
-                    <p className="list-text">{post.content}</p>
-    
+                    <p className="list-text">{post.content}<Link to={'blog-post'}>Read more</Link></p>
                     </li>
                 )})}
         </ul>
